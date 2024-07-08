@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Unique-Partners</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+nav img {
+  max-height: 70px; /* Adjusted size */
+}
+nav div {
+  display: flex;
+  justify-content: flex-end;
+  flex-grow: 1;
+}
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  transition: color 0.3s;
+}
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+nav a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+nav a:active {
+  animation: clickAnimation 0.3s ease;
+}
+@keyframes clickAnimation {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+.images {
+  text-align: center;
+  margin: auto;
+}
+.images img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: auto;
+  max-width: 300px; /* Größere Bildgröße */
+}
+.section-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.section-container .item {
+  width: 48%; /* Zwei Items nebeneinander */
+  margin-bottom: 40px; /* Größerer Abstand zwischen den Items */
+}
+.video-container {
+  text-align: center;
+}
+.video-container video {
+  width: 100%;
+  max-width: 300px; /* Adjusted video size */
+}
+.w3-black {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 20px 0; /* Anpassung des Abstands oben und unten */
+}
+.w3-black p {
+  margin: 0;
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <img src="img/Logo.jpg" alt="Unique Partners Logo">
+  <div>
+    <a href="Unique Partners.html">Home</a>
+    <a href="ueber-uns.html">Über uns</a>
+    <a href="kontakt.html">Kontakt</a>
+  </div>
+</nav>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+
+  <!-- Automatic Slideshow Images -->
+  <div class="mySlides w3-display-container w3-center">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+    </div>
+  </div>
+
+  <!-- The Band Section -->
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+    <h2 class="w3-wide">-Über uns-</h2>
+    <br>
+    <br>
+    <p class="w3-opacity"><i></i></p>
+    <div class="images">
+      <img src="img/unnamed.jpg" alt="Event Manager" class="animated">
+    </div>
+    <br>
+    <br>
+    <p><h4>"Liebe Menschen, Ich bin Delia, von Unique-Partner. Unsere Vision: Eine Welt, 
+      in der Kinder und Künstler aufblühen, wo Start-up-Projekte Großes wagen. 
+      Gemeinsam weben wir an einem Morgen, wo Kunst und Bewegung die Social Media Schatten vertreiben. 
+      Lasst uns die Zukunft gestalten – voller Farbe, Leben und Leidenschaft." Herzlich, Delia<h4></p>
+  </div>
+
+  <!-- Bild Patrick -->
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+    <p class="w3-opacity"><i></i></p>
+    <div class="images">
+      <img src="img/patrick.jpg" alt="Front-End Engieneer" class="animated">
+    </div>
+    <br>
+    <br>
+    <p><h4>Ein Front-End-Ingenieur erstellt die Benutzeroberflächen von Webseiten und Apps. 
+      Er nutzt HTML, CSS und JavaScript für ansprechende und benutzerfreundliche Designs und sorgt dafür, 
+      dass die Seiten auf allen Geräten gut funktionieren. Er arbeitet eng mit Designern zusammen und 
+      optimiert die Webseitenleistung.
+      Der Ingenieur freut sich über die Zusammenarbeit mit Kunden. Er versteht ihre Bedürfnisse und setzt 
+      ihre Anforderungen technisch um. Durch das Feedback der Kunden verbessert er ständig seine Arbeit. 
+      Diese Zusammenarbeit motiviert und erfreut ihn.<h4></p>
+  </div>
+
+  <!-- The Tour Section -->
+  <div class="w3-black" id="tour">
+    <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
+      <ul class="w3-ul w3-border w3-white w3-text-grey"></ul>
+    </div>
+  </div>
+
+  <!-- Ticket Modal -->
+  <div id="ticketModal" class="w3-modal">
+    <div class="w3-modal-content w3-animate-top w3-card-4">
+      <header class="w3-container w3-teal w3-center w3-padding-32"> 
+        <span onclick="document.getElementById('ticketModal').style.display='none'" 
+       class="w3-button w3-teal w3-xlarge w3-display-topright">×</span>
+      </header>
+      <div class="w3-container"></div>
+    </div>
+  </div>
+
+  <!-- The Contact Section -->
+  <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
+    <div class="w3-row w3-padding-32">
+      <div class="w3-col m6 w3-large w3-margin-bottom"></div>
+      <div class="w3-col m6">
+        <form action="/action_page.php" target="_blank">
+          <div class="w3-row-padding" style="margin:0 -16px 8px -16px"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Schwarzer Balken -->
+  <div class="w3-black">
+  </div>
+</div>
+
+<script>
+// Automatic Slideshow - change image every 4 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 4000);    
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+//
