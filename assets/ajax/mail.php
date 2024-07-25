@@ -1,5 +1,5 @@
 <?php
-$to = "your@email.com";
+$to = "info@unique-partners.ch";
 $first_name = $_POST['first_name'];
 $last_name = $_POST['last_name'];
 $email = $_POST['email'];
